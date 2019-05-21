@@ -1,0 +1,429 @@
+/*General*/
+
+body {
+  margin: 0;
+  background-color: #43115c;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #55286c;
+  color: white;
+  text-decoration: none;
+  padding: 1em 2em;
+  margin: 0.5em 0;
+  border: 1px solid lightgrey;
+}
+
+.btn:hover {
+  background-color: #d7bfe3;
+  padding: 1em 2.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.simple {
+  color: green;
+  text-decoration: underline;
+}
+
+a.simple:hover {
+  background-color: #d7bfe3;
+  padding: 0.5em;
+  border-radius: 10%;
+}
+
+/*navbar*/
+
+div#navbar {
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  height: 50px;
+}
+
+div#navbar ul {
+  display: inline-block;
+  margin-top: 0.7em;
+}
+
+#navbar li {
+  color: white;
+  float: left;
+  padding-top: 0;
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+#navbar a {
+  color: white;
+}
+
+#navbar a:hover {
+  color: pink;
+  font-size: 105%;
+}
+
+/*header showcase Welcome Picture*/
+
+#showcase {
+  min-height: 500px;
+  color: white;
+  text-align: center;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: #43115c
+    url(https://images.pexels.com/photos/48601/pexels-photo-48601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#showcase h1 {
+  padding-top: 180px;
+  padding-bottom: 0em;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 0em 3.5em;
+}
+
+/*Section A - Meet Our Orchids*/
+
+#section-a {
+  background-color: white;
+  color: #3e045c;
+  padding-bottom: 5em;
+  padding-top: 4em;
+}
+
+/*Section B - Card List with Pictures*/
+
+#section-b {
+  padding: 2em 1em 1em;
+}
+
+#section-b ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#section-b li {
+  margin-bottom: 1em;
+  background-color: white;
+  color: #3e045c;
+}
+
+#section-b a {
+  color: #3e045c;
+}
+
+#section-b p {
+  padding: 1em;
+}
+
+.card-content {
+  padding-bottom: 1em;
+}
+
+/*Section C-Table of Prices*/
+
+#section-c {
+  background-color: green;
+  padding: 2em;
+  margin: 0;
+  text-align: center;
+}
+
+#section-c img {
+  width: 7em;
+  border-radius: 3%;
+}
+
+td {
+  padding-bottom: 1em;
+}
+
+th {
+  font-weight: bold;
+  padding-left: 1em;
+}
+
+/*name of the orchid*/
+.name {
+  width: 1em;
+}
+
+#section-c .Flowers:hover {
+  width: 90%;
+}
+
+a.flowerlink {
+  text-decoration: underline;
+  color: white;
+}
+
+a.flowerlink:hover {
+  color: purple;
+  text-decoration: none;
+}
+
+/*Section D-We handle your orchid needs*/
+
+#section-d {
+  background-color: white;
+  color: #3e045c;
+  padding: 4em 2em 5em 2em;
+}
+
+/*Section E Questionnaire */
+
+#quizimage {
+  background: url(http://www.aljanh.net/data/archive/img/4196890863.png);
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 32em;
+  margin-top: 8em;
+  height: 33em;
+  opacity: 0.4;
+}
+
+#section-e {
+  color: #3e045c;
+  width: 32em;
+  margin: 2em auto;
+  text-align: center;
+  background: white;
+  padding: 2em auto;
+  border-radius: 0em;
+  z-index: 2;
+}
+
+#section-e .content-wrap {
+  z-index: 2;
+}
+
+#section-e h2 {
+  text-align: center;
+  padding-bottom: 0;
+  padding-top: 2em;
+  text-shadow: 1px 1px 1px grey;
+}
+
+#section-e p {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+input {
+  margin: 0.5em 1em;
+}
+
+button {
+  text-align: center;
+  font-size: 0.5em;
+  padding: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: white;
+  font-size: 0.9em;
+  background: #55286c;
+  border: 1px solid lightgrey;
+}
+
+button:hover {
+  background-color: #d7bfe3;
+  color: white;
+  font-size: 85%;
+}
+
+#answer {
+  position: relative;
+  bottom: 10px;
+  border: 0.1em dotted grey;
+  background: light;
+  padding: 1em;
+  margin: 1em 5em;
+  border-radius: 0.2em;
+}
+
+/*Section F - Contact Us*/
+
+#section-f .box {
+  padding: 1em 2em 1em 3em;
+  color: white;
+}
+
+#section-f p {
+  padding: 0.5em;
+}
+
+#section-f .box:first-child {
+  background-color: #2b6c28;
+}
+
+#section-f .box:nth-child(2) {
+  background-color: white;
+  color: #2b6c28;
+}
+
+/*Footer*/
+
+#main-footer {
+  padding: 1em;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#main-footer a {
+  text-decoration: none;
+}
+
+/*Media Queries*/
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 25em) minmax(auto, 25em) 1fr;
+  }
+
+  /*Section A*/
+  #section-a .content-text {
+    column-count: 2;
+    column-gap: 2em;
+  }
+
+  #section-a .content-text p {
+    padding: 0;
+  }
+
+  /*Section B*/
+  #section-b ul {
+    display: flex; /*to make them float next to each other in PC view*/
+    justify-content: space-around;
+  }
+
+  #section-b li {
+    width: 31%;
+  }
+
+  #section-b li:hover {
+    width: 32%;
+  }
+
+  .content-wrap,
+  #section-b ul {
+    grid-column: 2 / 4;
+  }
+
+  /*Section C - Table of Prices*/
+
+  #section-c {
+    padding-bottom: 4em;
+    padding-top: 3em;
+  }
+
+  #section-c div {
+    grid-column: 2/4;
+  }
+
+  #section-c th,
+  td {
+    padding-left: 4em;
+  }
+
+  /*Section E*/
+
+  #section-e {
+    width: 50em;
+  }
+
+  input {
+    color: purple;
+    margin-left: 3em;
+  }
+
+  #section-e p {
+    font-weight: bold;
+    margin-bottom: -3em;
+  }
+
+  #section-e h4 {
+    padding-top: 2em;
+  }
+
+  #quizimage {
+    width: 50em;
+    height: 30em;
+  }
+
+  button {
+    margin-left: 2em;
+  }
+
+  /*Section F*/
+
+  #section-f .box {
+    /*DOES NOT WORK*/
+    float: left;
+    width: 40%;
+    grid-column: span 3;
+  }
+
+  #main-footer div {
+    /*to put the green and purple boxes next to each other*/
+    grid-column: span 2;
+  }
+
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  #navbar li {
+    color: white;
+    float: left;
+    margin-right: 6em;
+    list-style-type: none;
+  }
+}
