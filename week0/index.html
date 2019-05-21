@@ -1,0 +1,255 @@
+<!-- Application to Hack Your Future April 2019-->
+
+<!-- I tried to make a responsive website using CSS grid layout and media queries. The layout changes when the browser gets bigger than 700px. There are still some sloppy parts but this was the best I could do for now-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elegant Orchids</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!--This is navbar-->
+  <div id="navbar">
+    <ul>
+      <li><a href="#showcase">Home</a></li>
+      <li><a href="#section-a">Information</a></li>
+      <li><a href="#section-c">Prices</a></li>
+      <li><a href="#section-e">Questionnaire</a></li>
+      <li><a href="#section-f">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!--This is header-->
+  <header id="showcase" class="grid">
+    <div class="bg-image"></div>
+    <div class="content-wrap">
+      <h1>Welcome to Elegant Orchids</h1>
+      <p>Serving you best quality Orchids with the most affordable prices. Shipping all over the world since 1997.</p>
+      <a href="#section-a" class="btn">Read More</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!--Section A- Simple introduction with white background-->
+    <section id="section-a" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">Meet Our Orchids</h2>
+        <div class="content-text">
+          <p>It's so nice to have you here. We know that you share our love for <em>flowers</em>, especially <strong>Orchids</strong>. Aren't they fascinating? We offer <strong>more than 50 types of orchids</strong> from all around the world. With all the
+            colours and shapes you can think of. So don't be shy. Explore our website. We have in-depth descriptions of orchids here. When did they come to existence, what are they good for, where in the world do they grow? And so on and so forth. See
+            it for yourself. <a href="https://en.wikipedia.org/wiki/Orchidaceae" class="simple">Your journey begins here...</a> </p>
+        </div>
+      </div>
+    </section>
+
+    <!--section B - 3 pictures next to each other with text underneath-->
+    <section id="section-b" class="grid">
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Flower" class="cardlink">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/926572/pexels-photo-926572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="White orchid Photo by Artem Bali from Pexels">
+              <div class="card-content">
+                <h3 class="card-title">Distinguish Your Flower</h3>
+                <p>Take a picture of your orchid and check what type of Orchids it is.</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Plant_communication" class="cardlink">
+            <div class="card">
+              <img src="https://i.ibb.co/vvLvH4Z/oie-18212558-S02s-E0-TA.jpg" alt="oie-18212558-S02s-E0-TA">
+              <div class="card-content">
+                <h3 class="card-title">Learn Their Language</h3>
+                <p>Just because they cannot react, it doesn't mean they don't understand you.</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Houseplant_care" class="cardlink">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/1261173/pexels-photo-1261173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="white broken orchid">
+              <div class="card-content">
+                <h3 class="card-title">Taking Care</h3>
+                <p>Research shows that plants need more love than humans. Give all the love you have and see how your Orchid shines.</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!--Section C Table of Prices-->
+    <section id="section-c" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">Our Prices</h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Type</th>
+              <th>Small</th>
+              <th>Medium</th>
+              <th>Large</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img class="Flowers" src="https://images-na.ssl-images-amazon.com/images/I/81h6khMarTL._SY679_.jpg" alt="PHALAENOPSIS ORCHIDS"></td>
+              <td class="name"><a href="https://en.wikipedia.org/wiki/Phalaenopsis" class="flowerlink">PHALAENOPSIS ORCHIDS</a></td>
+              <td>8 €</td>
+              <td>12 €</td>
+              <td>16 €</td>
+            </tr>
+            <tr>
+              <td><img class="Flowers" src="https://i5.walmartimages.com/asr/fdf78710-971b-4839-ac07-49d30204bd0b_1.3325fc1828b0afbf83e3b3b0d684e7f1.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" alt="ONCIDIUM ORCHIDS"></td>
+              <td class="name"><a href="https://en.wikipedia.org/wiki/Oncidium" class="flowerlink">ONCIDIUM ORCHIDS</a></td>
+              <td>6 €</td>
+              <td>10 €</td>
+              <td>14 €</td>
+            </tr>
+            <tr>
+              <td><img class="Flowers" src="https://images.homedepot-static.com/productImages/c09048d4-8470-4b25-b325-d0d0c880cf39/svn/jane-seymour-botanicals-artificial-flowers-sdp224-wh-64_1000.jpg" alt="VANDA ORCHIDS"></td>
+              <td class="name"><a href="https://en.wikipedia.org/wiki/Vanda" class="flowerlink">VANDA ORCHIDS</a></td>
+              <td>13 €</td>
+              <td>20 €</td>
+              <td>27 €</td>
+            </tr>
+            <tr>
+              <td><img class="Flowers" src="https://cdn3.volusion.com/qpcsg.hlonp/v/vspfiles/photos/SDP225-RUSI-2.jpg?1469549767" alt="CYMBIDIUM ORCHIDS"></td>
+              <td class="name"><a href="https://en.wikipedia.org/wiki/Cymbidium" class="flowerlink">CYMBIDIUM ORCHIDS</a></td>
+              <td>8 €</td>
+              <td>12 €</td>
+              <td>20 €</td>
+            </tr>
+            <tr>
+              <td><img class="Flowers" src="https://www.giftsforeurope.com/images/gene/prod/norm/cado001271_01_dendrobium-orchid-sanook-purple.jpg" alt=""></td>
+              <td class="name"><a href="https://en.wikipedia.org/wiki/Dendrobium" class="flowerlink">DENDROBIUM ORCHIDS</a></td>
+              <td>25 €</td>
+              <td>40 €</td>
+              <td>65 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!--Section D -->
+    <section id="section-d" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">We handle all your Orchids needs</h2>
+        <p>We believe that everyone should have <strong><em>the basic human right to possess fresh pleasant flowers</em></strong>. In our part, we are making Orchids available for every human being across the world. In fact, on some special days we might
+          even <strong>give them away for free</strong>! Follow us and get your chance to win free Orchids! <a href="https://en.wikipedia.org/wiki/Human_rights" class="simple">Read more...</a></p>
+      </div>
+    </section>
+
+    <!--Section E -->
+    <section id="section-e" class="grid">
+      <div id="quizimage"></div>
+      <div class="content-wrap">
+        <div id="quizheader">
+          <h2>What kind of Orchids is the most suitable for you?</h2>
+          <p>Fill this questionnaire to find out!</p>
+        </div>
+        <form id="quiz">
+          <!--Question 1-->
+          <div class="question">
+            <h4>You see yourself as extraverted, enthusiastic?</h4>
+            <input type="radio" name="q1" value="a">Disagree Strongly
+            <input type="radio" name="q1" value="b"> Disagree a little
+            <input type="radio" name="q1" value="c"> Agree a little
+            <input type="radio" name="q1" value="d"> Agree Strongly
+          </div>
+          <!--Question 2-->
+          <div class="question">
+            <h4>You see yourself as anxious, easily upset?</h4>
+            <input type="radio" name="q2" value="a">Disagree Strongly
+            <input type="radio" name="q2" value="b"> Disagree a little
+            <input type="radio" name="q2" value="c"> Agree a little
+            <input type="radio" name="q2" value="d"> Agree Strongly
+          </div>
+          <!--Question 3-->
+          <div class="question">
+            <h4>You see yourself as creative?</h4>
+            <input type="radio" name="q3" value="a">Disagree Strongly
+            <input type="radio" name="q3" value="b"> Disagree a little
+            <input type="radio" name="q3" value="c"> Agree a little
+            <input type="radio" name="q3" value="d"> Agree Strongly
+          </div>
+          <!--Question 4-->
+          <div class="question">
+            <h4>You see yourself as traditional?</h4>
+            <input type="radio" name="q4" value="a">Disagree Strongly
+            <input type="radio" name="q4" value="b"> Disagree a little
+            <input type="radio" name="q4" value="c"> Agree a little
+            <input type="radio" name="q4" value="d"> Agree Strongly
+          </div>
+          <!--Question 5-->
+          <div class="question">
+            <h4>You see yourself as lazy?</h4>
+            <input type="radio" name="q5" value="a">Disagree Strongly
+            <input type="radio" name="q5" value="b"> Disagree a little
+            <input type="radio" name="q5" value="c"> Agree a little
+            <input type="radio" name="q5" value="d"> Agree Strongly
+          </div>
+          <!--Question 6-->
+          <div class="question">
+            <h4>Which of these colors do you like the most?</h4>
+            <input type="radio" name="q6" value="a">Pink
+            <input type="radio" name="q6" value="b"> Blue
+            <input type="radio" name="q6" value="c"> White
+            <input type="radio" name="q6" value="d"> Yellow
+          </div>
+          <!--Question 7-->
+          <div class="question">
+            <h4>What is your favourite time of the year?</h4>
+            <input type="radio" name="q7" value="a">Spring
+            <input type="radio" name="q7" value="b"> Summer
+            <input type="radio" name="q7" value="c"> Autumn
+            <input type="radio" name="q7" value="d"> Winter
+          </div>
+          
+            <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+  <button type="reset" id="reset" onclick="resetAnswers()">Reset</button>
+
+        <div id="answer">Your Orchid Type</div>
+
+      </div>
+      </div>
+    </section>
+
+    <!--Section F Contact Info and About Us-->
+    <section id="section-f" class="grid">
+      <div class="content-wrap">
+        <div class="box">
+          <h2 class="content-title">Contact Us</h2>
+          <p>We are available 24/7 every day including the Holidays! Don't hesitate to give us a call or send a text via Whatsapp.</p>
+          <p><span style="color:#43115c;font-weight:bold">Find Us : </span><em>Faunastraat 60 Wormer 1531 WH Netherlands</em></p>
+          <p><span style="color:#43115c;font-weight:bold">Call Us : </span><em> 075-6172252</em></p>
+          <p><span style="color:#43115c;font-weight:bold">Mail Us : </span><a href="mailto:contact@elegantorchids.test?Subject=Hello" target="_top"><span style="color:white;text-decoration:underline">contact@elegantorchids.test</span></a></p>
+        </div>
+        <div class="box">
+          <h2 class="content-title">About Us</h2>
+          <p>Orchids are my mother's favourite flowers. So when I asked her for an idea for a <em>"company"</em> she said <em>"Why don't you provide affordable Orchids to people so that they can share the love too?"</em> and from then on, Orchids became
+            our passion. Who cares about the profits, as long as you're happy we're happy!<br><em>And no, we are still not bankrupt.</em></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--This is the footer-->
+  <footer id="main-footer" class="grid">
+    <div>Copyright © Elegant Orchids</div>
+    <div>Project by <a href="">Gulpembe Yener</a></div>
+  </footer>
+</body>
+
+</html>
