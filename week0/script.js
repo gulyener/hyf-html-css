@@ -32,7 +32,7 @@ function tabulateAnswers() {
   var answerbox = document.getElementById('answer');
   
   if (ascore == maxscore) {
-    answerbox.innerHTML = "Yellow Orchid";
+    answerbox.innerHTML = "Pink Orchid";
   }
   if (bscore == maxscore) {
     answerbox.innerHTML = "Blue Orchid";
@@ -41,7 +41,7 @@ function tabulateAnswers() {
     answerbox.innerHTML = "White Orchid";
   }
   if (dscore == maxscore) {
-    answerbox.innerHTML = "Pink Orchid";
+    answerbox.innerHTML = "Yellow Orchid";
   }
   
   /*So that the answer stays on the screen after clicking it*/
