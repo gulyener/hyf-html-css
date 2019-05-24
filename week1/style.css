@@ -1,0 +1,187 @@
+/* General */
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(12, 62, 99);
+  font-size: 1.2em;
+}
+
+section {
+  min-width: 300px;
+  border: 5px solid rgb(178, 247, 224, 0.5);
+  margin: 0 100px;
+  padding: 1.5em 2em;
+  background-color: white;
+  opacity: 0.96;
+  grid-column: 2/4;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*The vertical line between sections*/
+.vertical-line {
+  height: 6em;
+  background-color: rgb(178, 247, 224);
+  width: 1px;
+  margin: auto;
+}
+
+/* Background of the Photo */
+#showcase {
+  min-height: 500px;
+  background-color: rgb(178, 247, 224, 0.9);
+}
+
+/* Photo */
+img {
+  min-width: 200px;
+  max-width: 500px;
+  margin: 50px 0;
+}
+
+/* Button - View My Portfolio */
+#myportfolio {
+  background-color: rgb(178, 247, 224, 0.7);
+  width: 30%;
+  height: 2.5em;
+  text-align: center;
+  margin: auto;
+  font-size: 1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Triangles for the design */
+.triangle1 {
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-left: 150px solid#b7c2be;
+  opacity: 0.8;
+  border-bottom: 280px solid transparent;
+  bottom: 10em;
+  top: 27em;
+  z-index: -3;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(40deg);
+}
+
+.triangle2 {
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-top: 150px solid transparent;
+  border-right: 200px solid#6f9fb6;
+  opacity: 0.6;
+  border-bottom: 250px solid transparent;
+  bottom: 10em;
+  top: 25em;
+  right: 0;
+  z-index: -1;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(20deg);
+}
+
+/* Top Navbar */
+nav {
+  width: 100%;
+  display: inline-block;
+
+  grid-column: span 5;
+}
+
+nav li {
+  font-size: 1.2em;
+  text-indent: 1em;
+  list-style-type: none;
+  float: left;
+}
+
+nav a,
+#myportfolio {
+  color: rgb(161, 166, 169);
+}
+
+nav a:hover,
+#myportfolio:hover {
+  color: white;
+}
+
+/* Side Navbar */
+#mySidenav a {
+  position: fixed;
+  right: -120px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(157, 167, 163, 0.9);
+  border-radius: 10%;
+  z-index: 5;
+}
+
+#mySidenav a:hover {
+  right: -8px;
+}
+
+/* Displaying my name */
+.row {
+  text-align: right;
+  position: absolute;
+  top: 150px;
+  padding-left: 30px;
+  margin: auto;
+  grid-column: span 3;
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond,
+    Times New Roman, serif;
+  grid-column: 2/4;
+}
+
+/* Used grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 25em) minmax(auto, 25em) 1fr;
+}
+
+.content-wrap,
+section {
+  grid-column: 2/4;
+}
+
+/* HYF Info List */
+#section-c ul {
+  display: inline-block;
+}
+#section-c li {
+  float: left;
+  display: inline-block;
+  margin: 0;
+}
+#section-c img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Fixing some indenting/layout */
+#section-d li {
+  text-indent: -30px;
+}
+
+#section-b p {
+  margin-top: -20px;
+}
