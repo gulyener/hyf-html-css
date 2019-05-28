@@ -1,0 +1,27 @@
+1. 	To create a hidden file/folder: mkdir .hiddenfileorfoldername
+
+
+	To display hidden files/folders: ls -a
+
+
+2. 	To create nested directories at once: 
+
+	mkdir -p /these/folders/are/just/for/fun
+
+
+3. 	Executing commands:
+
+	echo "test" > fun
+	echo "another test" >> fun
+	wc -c fun
+
+	Output: 18 fun
+
+
+4. 	To append something in the file without a newline character:
+
+	echo -n “test" > fun
+	echo -n “another test" >> fun
+	cat fun
+
+	Output: testanother test
