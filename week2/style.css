@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(250, 223, 66);
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.5em;
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+li {
+  opacity: 0.9;
+  border-radius: 4%;
+  background-color: white;
+  box-shadow: 3px 5px 5px rgba(97, 84, 10, 0.432);
+}
+
+li:hover {
+  opacity: 1;
+  box-shadow: 3px 5px 5px rgba(85, 15, 117, 0.808);
+}
+
+img {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.grid-item {
+  padding: 1.5em;
+  margin: 1em;
+  display: block;
+}
+
+/* Design */
+
+header {
+  background-image: url(https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center;
+  background-size: cover;
+  color: rgba(252, 223, 55, 0.479);
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font: 6em garamond;
+}
+
+h2 {
+  font: bold 2.2em bookman;
+  height: 1.3em;
+  color: rgba(19, 2, 2, 0.884);
+  letter-spacing: 3px;
+  margin: 0.7em 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.747);
+}
+
+h2:hover {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+h3 {
+  color: rgb(80, 10, 114);
+  padding: 0.6em;
+}
+
+/* Using FLoat */
+
+#grid-floats {
+  margin-left: 4%;
+  display: inline-block;
+}
+
+#grid-floats .grid-item {
+  width: calc(26% - 53px);
+  height: 40em;
+  float: left;
+}
+
+#grid-floats .grid-item:nth-child(1) {
+  min-width: 45%;
+}
+
+/* Using Keyframe Animation on the first child*/
+#grid-floats .grid-item:nth-child(1),
+#grid-flex .grid-item:nth-child(1) {
+  -webkit-animation: example 1.2s infinite;
+  -moz-animation: example 1.2s infinite;
+  -o-animation: example 1.2s infinite;
+  animation: example 1.2s infinite;
+  animation-direction: alternate;
+  -webkit-transition: border 500ms linear;
+  -moz-transition: border 500ms linear;
+  -o-transition: border 500ms linear;
+  transition: border 500ms linear;
+}
+
+#grid-floats .grid-item:nth-child(1):hover,
+#grid-flex .grid-item:nth-child(1):hover {
+  border: 5px solid rgba(219, 6, 6, 0.925);
+  animation: none;
+}
+
+@-webkit-keyframes example {
+  from {
+    transform: rotate(-15deg) scale(0.95);
+  }
+  to {
+    transform: rotate(15deg) scale(0.95);
+  }
+}
+
+/* Small Size for Float*/
+
+@media screen and (max-width: 479px) {
+  header,
+  h2 {
+    height: 2.5em;
+    font-size: 1.5em;
+    padding-top: 10px;
+  }
+
+  #grid-floats .grid-item {
+    width: calc(45% - 20px);
+    height: 49rem;
+  }
+
+  #grid-floats .grid-item:nth-child(1) {
+    width: calc(100% - 50px);
+    height: 30rem;
+  }
+}
+
+/* Medium Size for Float*/
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  #grid-floats .grid-item {
+    min-width: 25%;
+    height: 54rem;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  #grid-floats .grid-item:nth-child(1),
+  #grid-floats .grid-item:nth-child(2) {
+    min-width: 41%;
+    height: 485px;
+    background-color: cornsilk;
+  }
+}
+
+/* Using Flex */
+
+#grid-flex {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+#grid-flex .grid-item {
+  width: 15%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+}
+
+#grid-flex .grid-item:nth-child(1) {
+  flex-basis: 40%;
+}
+
+/* Small Size for FLex */
+@media only screen and (max-width: 478px) {
+  #grid-flex .grid-item {
+    flex-basis: 25%;
+  }
+
+  #grid-flex .grid-item:nth-child(1) {
+    flex-basis: calc(87% - 50px);
+  }
+}
+
+/* Medium Size For FLex */
+@media only screen and (max-width: 1000px) and (min-width: 479px) {
+  #grid-flex .grid-item {
+    width: calc(25% - 60px);
+  }
+
+  #grid-flex .grid-item h3 {
+    margin-left: -18px;
+  }
+
+  #grid-flex .grid-item:nth-child(2),
+  #grid-flex .grid-item:nth-child(1) {
+    flex-basis: calc(34% - 20px);
+    background-color: cornsilk;
+  }
+}
