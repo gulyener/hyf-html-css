@@ -1,0 +1,560 @@
+<!-- I wanted to make a fully functioning web page so every link works
+    and I added some simple JavaScript code as well. Some of the fonts 
+    used were not for free so I found similar fonts that were free.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The world’s only Moomin Museum</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body onload="hideButton()">
+    <div id="navmain">
+        <header>
+            <!-- Language Selections that is only visible on large screens -->
+            <div class="language-choices">
+                <div class="language-dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        <img src="images/grey-arrow-png-16.png">
+                        <img src="images/en.png" alt="">
+                    </button>
+                    <div id="myDropdown" class="language-dropdown-item">
+                        <a href="https://muumimuseo.fi/en/"><img src="images/en.png" alt=""></a>
+                        <a href="https://muumimuseo.fi/"><img src="images/fi.png" alt=""></a>
+                        <a href="https://muumimuseo.fi/ja/"><img src="images/ja.png" alt=""></a>
+                        <a href="https://muumimuseo.fi/ru/"><img src="images/ru.png" alt=""></a>
+                        <a href="https://muumimuseo.fi/sv/"><img src="images/sv.png" alt=""></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tiny-logo">
+                <img src="images/bg-header-muumimuseo.png" alt="">
+            </div>
+
+            <!-- Top Navbar only visible on Large screens -->
+            <nav id="top-navbar">
+                <div class="logo">
+                    <img src="images/logo-muumimuseo-en.png" alt="" />
+                </div>
+                <ul class="menu">
+                    <li class="menu-item dropdown">
+                        <a href="https://muumimuseo.fi/en/exhibitions/">EXHIBITIONS</a>
+                        <ul class="sub-menu dropdown-content">
+                            <li>
+                                <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">What happens next?</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://muumimuseo.fi/en/exhibitions/tove-jansson-and-the-moomins/">Observatory</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/exhibitions/the-moomin-museum-reading-room/">The
+                                    Moomin Museum Reading Room</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/exhibitions/studio/">Studio</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/shop/">Shop</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a href="https://muumimuseo.fi/en/visit-us/">VISIT US</a>
+                        <ul class="sub-menu dropdown-content">
+                            <li>
+                                <a href="https://muumimuseo.fi/en/visit-us/info/">Info</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/visit-us/guides/">Guides</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/visit-us/groups/">Groups</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/exhibitions/the-moomin-museum-reading-room/">The
+                                    Moomin Museum Reading Room</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/restaurants/">Restaurants</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/shop/">Shop</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://muumimuseo.fi/en/news/">NEWS</a>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a href="https://muumimuseo.fi/en/moomin-museum/">MOOMIN MUSEUM</a>
+                        <ul class="sub-menu dropdown-content">
+                            <li>
+                                <a href="https://muumimuseo.fi/en/moomin-museum/about-tove-jansson/">About Tove
+                                    Jansson</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/moomin-museum/about-the-collection/">About the
+                                    collection</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://muumimuseo.fi/en/restaurants/">RESTAURANTS</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://muumimuseo.fi/en/shop/">SHOP</a>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a href="https://muumimuseo.fi/en/contact-us/">CONTACT US</a>
+                        <ul class="sub-menu dropdown-content">
+                            <li>
+                                <a href="https://muumimuseo.fi/en/contact-us/museum-personnel/">Museum personnel</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/contact-us/for-the-media/">For the media</a>
+                            </li>
+                            <li>
+                                <a href="https://muumimuseo.fi/en/contact-us/links/">Links</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Side Navbar only visible on Medium to Small Screens -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" id="closingButton" class="closebtn"
+                    onclick="closeNav()">&times;</a>
+                <img src="images/logo-muumimuseo-en.png" style="margin-left:10px;" alt="">
+                <div class="side-languages">
+                    <ul class="list-inline language-list">
+                        <li><a href="https://muumimuseo.fi/en/" class="selected">en</a></li>
+                        <li><a href="https://muumimuseo.fi/">fi</a></li>
+                        <li><a href="https://muumimuseo.fi/ja/">ja</a></li>
+                        <li><a href="https://muumimuseo.fi/ru/">ru</a></li>
+                        <li><a href="https://muumimuseo.fi/sv/">sv</a></li>
+                    </ul>
+                </div>
+                <a href="https://muumimuseo.fi/en/exhibitions/">Exhibitions</a>
+                <a href="https://muumimuseo.fi/en/visit-us/">Visit Us</a>
+                <a href="https://muumimuseo.fi/en/news/">News</a>
+                <a href="https://muumimuseo.fi/en/moomin-museum/">Moomin Museum</a>
+                <a href="https://muumimuseo.fi/en/restaurants/">Restaurants</a>
+                <a href="https://muumimuseo.fi/en/shop/">Shop</a>
+                <a href="https://muumimuseo.fi/en/contact-us/">Contact Us</a>
+            </div>
+            <span class="hidesidenavbar" style="font-size:50px;cursor:pointer;float:right;color:green;"
+                onclick="openNav()">&#9776;</span>
+        </header>
+        <main>
+            <!-- Mainbanner Section with layered images -->
+            <div class="mainbanner">
+                <img src="images/m-131-web-v-1024x295.jpg" alt="" />
+                <div class="white">
+                    <h1>The world’s only Moomin Museum</h1>
+                    <h2>in Tampere, Finland!</h2>
+                    <a href="https://muumimuseo.fi/en/visit-us/info/">
+                        <div class="circle-orange-wrap">
+                            <div class="circle-orange">Info</div>
+                        </div>
+                    </a>
+                </div>
+                <img id="second-image" src="images/mv2.jpg" alt="" />
+            </div>
+
+            <!-- Green Section with short text -->
+            <div class="front-info-block">
+                <div class="front-info-block-text">
+                    "Tue-Wed 9am-5pm, Thu-Fri 9am-7pm, Sat-Sun 10am-5pm, closed Mon / Adults 12€, children 6 € / Tampere
+                    Hall, Yliopistonkatu 55, Tampere, Finland"
+                </div>
+                <div class="front-info-block-card">
+                    <a href="http://www.museot.fi/en.php" target="_blank">
+                        <img src="https://muumimuseo.fi/wp-content/uploads/sites/2/2017/02/museokortti_ikoni.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!--Black Section with blinking eyes -->
+            <div>
+                <a href="http://muumimuseo.fi/en/exhibitions/" target="_self">
+                    <div class="front-title-block">
+                        <div class="eyes-left">
+                            <img src="https://muumimuseo.fi/wp-content/themes/muumimuseo/images/silmat-vasen.gif"
+                                alt="">
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                <h2>Exhibitions</h2>
+                            </div>
+                        </div>
+                        <div class="eyes-right">
+                            <img src="https://muumimuseo.fi/wp-content/themes/muumimuseo/images/silmat-oikea.gif"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- News Section with Cards -->
+            <div class="front-news-blocks">
+                <div class="cards">
+                    <article class="card carousel-container">
+                        <div class="front-news-image">
+                            <div class="carousel-inner" id="carousel-inner-id">
+                                <div class="carousel-item showing">
+                                    <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">
+                                        <img src="images/A7A5931-570-px.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">
+                                        <img src="images/m-155-web-v_285px.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">
+                                        <img src="images/A7A5306-570px.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="buttons">
+                                    <button class="controls" id="previous">&lt;</button>
+                                    <button class="controls" id="next">&gt;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="front-news-text">
+                            <h2>What Happens Next?</h2>
+                            <p>Where did the ancestors of the Moomins live? What was Moominpappa’s stormy youth like?
+                                What do Hattifatteners do during a thunderstorm? These and many other secrets are
+                                revealed in What Happens Next?.</p>
+                            <p>The Moomin Museum’s first permanent exhibition retells the entire story of the Moomins,
+                                starting from the Great Flood and the mad midsummer’s floating theatre to the puzzle of
+                                the lighthouse and the mysterious disappearance of the Moomins one grey November day.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <a href="https://muumimuseo.fi/en/exhibitions/tove-jansson-and-the-moomins/">
+                            <div class="front-news-image">
+                                <img src="images/Moominvalley-animation-series_Gutsy-Animations_Last-Dragon-ei-iso-720x720.jpg"
+                                    alt="">
+                            </div>
+                        </a>
+                        <div class="front-news-text">
+                            <h2>In the Observatory</h2>
+                            <p>Our new exhibition “Moomin Animations – Thrills and Cuddles” tells about the history of
+                                Moomin animations.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <a href="https://muumimuseo.fi/en/events/guided-tours-english-every-sunday/">
+                            <div class="front-news-image">
+                                <img src="images/A7A5934-260x260.jpg" alt="">
+                            </div>
+                            <div class="front-news-text">
+                                <p>01/01/2020</p>
+                                <h2>Free guided tours in English every weekend!</h2>
+                                <p>"The Moomin Museum offers free guided tours in English every Saturday and Sunday at 1
+                                    pm (Note the new time!). We can take 20 persons on [...]""</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Black Section with blinking eyes-->
+            <div class="section blinking-eyes">
+                <a href="http://muumimuseo.fi/en/news/" target="_self">
+                    <div class="front-title-block">
+                        <div class="eyes-left">
+                            <img src="https://muumimuseo.fi/wp-content/themes/muumimuseo/images/silmat-vasen.gif"
+                                alt="">
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                <h2>News</h2>
+                            </div>
+                        </div>
+                        <div class="eyes-right">
+                            <img src="https://muumimuseo.fi/wp-content/themes/muumimuseo/images/silmat-oikea.gif"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- News Section with Blue background, 4 News Aligned on top of each other -->
+            <div class="front-event-block">
+                <article>
+                    <div class="events">
+                        <h3>08 / 05 / 2019</h3>
+                        <h2>Mother's Day tour on 12 May at 1pm</h2>
+                        On Sunday we celebrate the Mother's Day in Finland. Tove Jansson once said ”without a happy
+                        childhood, I would never have become an author”. An important reason for Tove´s happy childhood
+                        was her mother Signe “Ham” Hammarsten-Jansson. Tove was so close to her mother that she created
+                        one of the most beloved Moomin characters, Moominmamma, after her. These three lifes intertwined
+                        but besides love and caring they also included sadness and jealously. On this Mother´s Day tour
+                        we walk through the Moomin stories together with Tove, Ham and Moominmamma.
+                    </div>
+                    <div class="circle-orange-wrap">
+                        <div class="circle-orange">
+                            <p>12 May 1 pm</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="events">
+                        <h3>29 / 04 / 2019</h3>
+                        <h2>New timetable for guided tours!</h2>
+                        Free guided tours in English start now at 1 pm on Saturdays and Sundays. We can take 20 persons
+                        on each tour, please come forward to the museum personnel at your arrival. Duration 45 min.
+                    </div>
+                    <div class="circle-orange-wrap">
+                        <div class="circle-orange">
+                            <p>Nb!</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="events">
+                        <a href="https://muumimuseo.fi/en/exhibitions/studio/">
+                            <h2>New workshop in the Studio!</h2>
+                            Make your own animation in the guided workshop! The Studio is open daily from noon to 4pm.
+                        </a>
+                    </div>
+                    <div class="circle-orange-wrap">
+                        <div class="circle-orange">
+                            <p>New!</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="events">
+                        <a href="https://muumimuseo.fi/en/guestofhonour/">
+                            <h2>Moomin Museum Guest of Honour</h2>Sigrid fom Belgium won the competition and the is the
+                            world's biggest Moomin fan. See a video of her adventures in Finland!
+                        </a>
+                    </div>
+                    <div class="circle-orange-wrap">
+                        <div class="circle-orange">
+                            <p>Fan nr 1</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Quote Section -->
+            <div>
+                <div class="quote-block">
+                    <p>All things are so very uncertain and that's exactly what's makes me reassured.</p>
+                    <div class="quote-name">Too-ticky, Moominland Midwinter</div>
+                </div>
+            </div>
+
+            <!-- White News Section with images starting with Tampere Hall-->
+            <div class="content-block-container">
+                <div class="content-block-text">
+                    <h2>Tampere Hall Shop</h2>
+                    <p>The shop is open to museum guests and all visitors at Tampere Hall. The range includes exciting
+                        Moomin souvenirs, design and music, books written and illustrated by Tove Jansson, Tampere
+                        souvenirs, and classic Finnish design brands.</p>
+                    <p>You will additionally find hand-made crafts by Finnish designers as well as music by the Tampere
+                        Philharmonic Orchestra, which is also based at Tampere Hall. Here you can buy Moomin postcards
+                        and stamps and have your letters stamped with a special Moomin postmark.</p>
+                </div>
+                <div class="content-image">
+                    <img src="images/Kuvagalleria-5.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div>
+                <div class="quote-block">
+                    <p>‘Well, it’ll be another nice long day tomorrow,’ said Moominmamma. ‘And it’s all yours from
+                        beginning to end. Now isn’t that a lovely thought!’</p>
+                    <div class="quote-name">Too-ticky, Moominland Midwinter
+                    </div>
+                </div>
+            </div>
+
+            <!-- White News Section with pic starting with Take a seat-->
+            <div class="content-block-container">
+                <div class="content-image">
+                    <img src="images/Photo-Iina-Martiskainen-web-1024x683.jpg" alt="">
+                </div>
+                <div class="content-block-text">
+                    <p>Take a seat and enjoy a quiet moment with one of Jansson’s books in the Moomin Museum Reading
+                        Room. In our Reading Room you will find Moomin books in over 20 languages, along with other
+                        books by and about Jansson. The collection features historical rarities and fresh copies of
+                        every new Moomin edition.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <!-- Footer With 3 Logos -->
+            <div class="site-links">
+                <div class="site-links-logo">
+                    <a href="https://tampere-talo.fi/en">
+                        <img src="images/tampere-hall-en.png" alt="">
+                    </a>
+                </div>
+                <div class="site-links-logo">
+                    <a href="https://muumimuseo.fi/en">
+                        <img src="images/moomin-museum-en.png" alt="">
+                    </a>
+                </div>
+                <div class="site-links-logo">
+                    <a href="https://tamperefilharmonia.fi/en">
+                        <img src="images/footer-logo-tampere-filharmonia.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Green -->
+            <div class="footer-navigation">
+                <div class="footer-navi-block">
+                    <h4>MOOMIN MUSEUM</h4>
+                    <div class="footer-company">Tampere Hall</div>
+                    <p itemprop="streetAddress">Yliopistonkatu 55</p>
+                    <p>
+                        <span itemprop="postalCode">33100</span>
+                        <span itemprop="addressLocality">Tampere, Finland</span>
+                    </p>
+                    <div class="footer-phone" itemprop="telephone">+358 3 243 4111</div>
+                    <a href="https://muumimuseo.fi/en/contact-us/" class="footer-btn">Contact us</a><br>
+                    <a href="http://www.tampere.fi/en/feedback.html.stx" target="_blank" class="footer-btn">Feedback</a>
+                </div>
+                <div class="footer-navi-block">
+                    <a href="http://muumimuseo.fi/en/exhibitions/" target="_self">
+                        <h4>EXHIBITONS</h4>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/exhibitions/what-happens-next/">What Happens Next?</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/exhibitions/tove-jansson-and-the-moomins/">Tove Jansson
+                                and the Moomins</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/exhibitions/studio/">Studio</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/exhibitions/the-moomin-museum-reading-room/">The Moomin
+                                Museum Reading Room</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-navi-block">
+                    <a href="http://muumimuseo.fi/en/visit-us/">
+                        <h4>VISIT US</h4>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/visit-us/guides/">Guides</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/visit-us/groups/">Groups</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/exhibitions/the-moomin-museum-reading-room/">The Moomin
+                                Museum Reading Room</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/restaurants/">Restaurants</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/shop/">Tampere Hall Shop</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-navi-block">
+                    <a href="http://muumimuseo.fi/en/moomin-museum/" target="_self">
+                        <h4>MOOMIN MUSEUM</h4>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/moomin-museum/about-tove-jansson/">About Tove Jansson</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/moomin-museum/about-the-collection/">About the
+                                collection</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-navi-block">
+                    <a href="http://muumimuseo.fi/en/contact-us/" target="_self">
+                        <h4>CONTACT US</h4>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/contact-us/museum-personnel/">Museum personnel</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/contact-us/for-the-media/">For the media</a>
+                        </li>
+                        <li>
+                            <a href="https://muumimuseo.fi/en/contact-us/links/">Links</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-navi-block">
+                    <a href="http://tampere-talo.fi/en" target="_self">
+                        <h4>TAMPERE HALL</h4>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Icons -->
+            <div class="footer-logos">
+                <div class="footer-logos-block">
+                    <div class="some-icons footer-ul">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/muumimuseo/?brand_redir=352770845065441"
+                                    target="_blank">
+                                    <i class="fa fa-facebook-official"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/moominmuseum/" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCPlOfUgK5kYLajo4dh8PzBg/videos"
+                                    target="_blank">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-logos-block">
+                    <a href="https://muumimuseo.fi/en/">
+                        <img src="images/footer-logo-muumimuseo-center.png" alt="">
+                    </a>
+                </div>
+                <div class="footer-logos-block">
+                    <ul class="list-inline footer-ul">
+                        <li class="copyright-text">© Muumimuseo 2017 I © Moomin Characters TM</li>
+                        <li>
+                            <img src="https://muumimuseo.fi/wp-content/uploads/sites/2/2017/02/vaakuna_tampere_muumimuseo.png"
+                                alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
