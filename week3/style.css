@@ -1,0 +1,822 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* For Quotes */
+@font-face {
+  font-family: "Behind Script";
+  src: url("fonts/BehindScript.otf");
+  font-weight: 400;
+}
+
+/* For Orange Circles */
+@font-face {
+  font-family: "Beautiful Mess";
+  src: url("fonts/BeautifulMess.ttf");
+  font-weight: 500;
+}
+
+/* For header */
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/montserrat/Montserrat-Light.otf");
+  font-weight: 100;
+}
+
+/*Instead of Bodoni Egyptian Pro */
+@font-face {
+  font-family: "Neuton Regular";
+  src: url("fonts/neuton/Neuton-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Neuton Light";
+  src: url("fonts/neuton/Neuton-Light.ttf");
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Neuton Regular";
+}
+
+main {
+  width: 80%;
+  margin-top: 0px;
+}
+
+header {
+  width: 80%;
+  box-sizing: content-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Rethink. The solution to get rid of the empty space after the images */
+img {
+  margin-bottom: -5px;
+}
+
+/* Header */
+.logo {
+  margin-left: 0px;
+  padding-bottom: 10px;
+  max-width: 20%;
+  display: block;
+  position: relative;
+}
+
+.tiny-logo {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/* Tiny Language Dropdown Menu */
+.language-choices {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+}
+
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.language-dropdown-item {
+  position: absolute;
+  display: none;
+  height: auto;
+  min-width: 50px;
+  padding: 12px 16px;
+  z-index: 10;
+  background-color: white;
+}
+
+.language-dropdown-item a {
+  display: block;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropbtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+/* Top Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.96em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu {
+  display: none;
+}
+
+.menu {
+  background-color: white;
+}
+
+.menu-item {
+  float: left;
+}
+
+.menu-item a {
+  display: block;
+  padding: 40px 16px;
+  color: rgb(44, 98, 46);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  padding: 12px 16px;
+  z-index: 20;
+  background-color: rgb(44, 98, 46);
+  color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  text-align: left;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+}
+
+/* Side navbar */
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  padding-top: 10px;
+  z-index: 100;
+  background-color: rgb(251, 251, 251);
+  box-shadow: inset 0 -3px 4px 4px rgba(199, 198, 198, 0.331);
+  transition: 0.5s;
+}
+
+.sidenav a {
+  display: block;
+  text-decoration: none;
+  padding: 8px 8px 8px 32px;
+  font-size: 20px;
+  color: rgb(44, 98, 46);
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  text-decoration: underline;
+  color: rgb(96, 94, 94);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  font-size: 60px;
+  top: 0px;
+  right: 260px;
+  z-index: 50;
+  color: rgb(44, 98, 46);
+}
+
+.sidenav .closebtn:hover {
+  text-decoration: none;
+  color: rgb(44, 98, 46);
+}
+
+.side-languages ul {
+  display: inline-block;
+  padding: 20px 0;
+}
+.side-languages ul li {
+  float: left;
+  margin-right: -15px;
+}
+
+/* Mainbanner Section */
+.mainbanner img {
+  width: 100%;
+  object-position: cover;
+}
+
+div.white {
+  font-family: "Neuton Regular";
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 1.3em;
+  margin: 0 auto;
+  z-index: 5;
+  background-color: white;
+}
+
+.circle-orange-wrap {
+  display: inline-block;
+  position: absolute;
+  right: -1.5rem;
+  top: 3rem;
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  background-color: rgb(233, 79, 49);
+}
+
+/* Orange Circles in the blue news section*/
+.circle-orange-wrap:nth-child(n + 2) {
+  float: right;
+  right: 0;
+  top: -100px;
+}
+
+.circle-orange {
+  position: relative;
+  float: left;
+  overflow: visible;
+  color: white;
+  font-family: "Beautiful Mess";
+  font-size: 3.5em;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 2.7em;
+  font-weight: 100;
+  font-family: "Neuton Regular";
+  color: #35733c;
+}
+
+.mainbanner h2 {
+  font-size: 2em;
+}
+
+/* Green Section with text */
+.front-info-block {
+  display: flex;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px 30px;
+  color: white;
+  background-color: rgb(44, 98, 46);
+}
+
+.front-info-block-text {
+  padding: 10px;
+}
+
+/* Black Section with eyes */
+
+.front-title-block {
+  display: flex;
+}
+
+.front-title-block .row {
+  flex: 1 1 60%;
+  height: auto;
+  background-color: rgb(54, 54, 54);
+}
+
+.front-title-block img {
+  max-width: 100%;
+}
+
+.row .text {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  font-family: "Neuton Light";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* News Section with moving pictures */
+.cards {
+  display: inline-block;
+}
+
+.card {
+  float: left;
+  width: calc(25%);
+}
+
+.card:nth-child(1) {
+  width: 50%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 22.8571px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+
+.cards p,
+h2 {
+  padding: 20px;
+}
+
+.card a:hover {
+  color: rgb(44, 98, 46);
+}
+
+.front-news-text {
+  padding: 30px;
+}
+
+.card:nth-child(1) h2 {
+  padding-top: 140px;
+}
+
+/* Carousel - Slide */
+.carousel-inner {
+  position: relative;
+  list-style-type: none;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel-item {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+.buttons {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.controls {
+  background: rgba(51, 51, 51, 0.002);
+  color: white;
+  font-style: bold;
+  padding: 20px 0px;
+  font-size: 30px;
+  cursor: pointer;
+  text-shadow: 3px 3px 5px #333;
+  box-shadow: 2px 2px 5px #333;
+  border: 2px solid white;
+  margin: 10px 0px 0px 10px;
+  width: 30px;
+}
+
+.controls:hover,
+.controls:focus {
+  background: #eee;
+  color: #333;
+}
+
+/* News Section with blue background 4 News placed on top of each other */
+.front-event-block {
+  background-color: rgb(123, 183, 188);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.events {
+  color: rgb(54, 54, 54);
+  font-size: 1.1em;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 32em;
+  letter-spacing: 0.01em;
+}
+
+.front-event-block article {
+  position: relative;
+}
+
+.front-event-block h3 {
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.events h3 {
+  color: white;
+}
+
+.events a {
+  color: rgb(54, 54, 54);
+}
+
+.front-event-block .circle-orange {
+  text-align: center;
+  font-size: 2em;
+}
+
+.front-event-block .circle-orange-wrap {
+  position: absolute;
+  display: block;
+  top: 30px;
+  right: 50px;
+  z-index: 30;
+}
+
+.front-event-block .circle-orange-wrap p {
+  font-size: 1.6em;
+  padding: 0;
+}
+
+/* Quote Section */
+.quote-block {
+  padding: 30px;
+  text-align: center;
+  min-height: 100px;
+}
+
+.quote-block p {
+  line-height: 1.1em;
+  font-weight: 200;
+  font-size: 3em;
+  padding: 0;
+  font-family: "Behind Script";
+}
+
+.quote-block div {
+  color: rgb(44, 98, 46);
+}
+
+.quote-name {
+  padding-top: 10px;
+  font-family: "Neuton Regular";
+  font-size: 2em;
+}
+
+/* White News Section with pic starting with Tampere Hall Shop */
+.content-block-text {
+  font-size: 1.1em;
+  letter-spacing: 0.01em;
+  padding: 0 20px;
+}
+
+.content-block-text h2 {
+  font-size: 1.9em;
+  margin-left: -20px;
+}
+
+.content-block-container div {
+  display: inline-block;
+  width: 47%;
+}
+
+.content-block-text:nth-child(1) {
+  float: left;
+}
+
+.content-block-text:nth-child(2) {
+  vertical-align: top;
+  padding: 30px;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.quote-block::before {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* Footer white background with 3 logos*/
+.site-links {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Footer green section */
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.87em;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-height: 400px;
+  padding: 80px;
+  color: white;
+  background-image: url(https://muumimuseo.fi/wp-content/themes/muumimuseo/images/bg-footer-navi.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 85%;
+}
+
+.footer-navi-block {
+  width: calc(30% - 3 * 10px);
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.footer-navi-block h4 {
+  padding: 20px 0;
+  font-size: 1.15em;
+}
+
+.footer-navi-block ul {
+  padding-bottom: 10px;
+}
+
+.footer-navi-block li {
+  padding-bottom: 10px;
+}
+
+.footer-navi-block li:hover {
+  text-decoration: underline;
+}
+
+.footer-navi-block:nth-child(1) * {
+  padding-top: 10px;
+}
+
+.footer-btn {
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px;
+  width: 150px;
+  border: 2px solid white;
+}
+
+/* Footer last section */
+.footer-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
+.footer-logos-block {
+  display: flex;
+  flex: row wrap;
+}
+
+.footer-ul {
+  flex: row wrap;
+}
+
+.footer-ul li {
+  margin: 0 10px;
+  float: left;
+}
+
+.some-icons li {
+  margin-right: 20px;
+  float: left;
+}
+
+i {
+  font-size: 20px !important;
+  color: green;
+}
+
+.hidesidenavbar {
+  display: none;
+}
+
+/* Media Queries */
+
+/* Smallest Size */
+@media (max-width: 576px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  main {
+    width: 96%;
+  }
+
+  /* Blinking eyes disappear in the smallest screen size*/
+  .front-title-block img {
+    display: none;
+  }
+
+  .row .text {
+    font-size: 16px;
+    padding: 50px;
+  }
+
+  .quote-block {
+    font-size: 0.7em;
+  }
+
+  div.footer-navi-block {
+    width: calc(100% - 2 * 10px);
+  }
+
+  .footer-logos {
+    padding: 0 30px;
+    margin-top: -130px;
+  }
+}
+
+/* Sizes until Medium Screen */
+@media (max-width: 768px) {
+  /* Carousel News Section with Cards */
+  .cards {
+    display: inline-block;
+  }
+
+  .card {
+    min-width: 100%;
+    max-height: 700px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .cards p,
+  h2 {
+    padding: 10px;
+  }
+
+  .card:nth-child(1) h2 {
+    padding-top: 180px;
+  }
+
+  /* News Section with Blue Background */
+  .front-event-block {
+    min-height: 100em;
+  }
+
+  .circle-orange-wrap:nth-child(n + 2) {
+    display: inline-block;
+    margin: 0% 40% 10% 40%;
+    flex-flow: row wrap;
+    right: 0px;
+    top: 0;
+    position: relative;
+    z-index: inherit;
+  }
+
+  .circle-orange-wrap:nth-child(1) {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 0;
+  }
+
+  /* Last news section with white background starting with Tampere Hall*/
+  .content-image {
+    margin: 10px;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .footer-navi-block {
+    width: calc(50% - 2 * 10px);
+  }
+}
+
+/* Size until Large Screen */
+@media (max-width: 1150px) {
+  .tiny-logo {
+    display: none;
+  }
+
+  .language-choices {
+    display: none;
+  }
+
+  /* Last News Section with images starting with Tampere Hall Shop */
+  .content-block-text {
+    padding: 0 20px;
+  }
+
+  .content-block-container div {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .hidesidenavbar {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    display: block;
+  }
+
+  /*Makes the card items align underneath */
+  .card {
+    float: left;
+    height: 800px;
+    width: calc(50%);
+  }
+
+  .card:nth-last-child()::before {
+    clear: both;
+    content: "";
+    display: block;
+  }
+
+  .card:nth-child(1) .front-news-text {
+    margin-top: -100px;
+  }
+}
+
+/* XL Screen */
+@media (min-width: 1300px) {
+  .menu {
+    display: inline-block;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  div.white {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 390px;
+    left: 350px;
+    width: 700px;
+    background-color: white;
+  }
+
+  /* Footer white part Site Links to Align next to each other when screen is large*/
+  .site-links {
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .site-links-logo {
+    flex: row wrap;
+  }
+
+  .footer-navi-block {
+    width: calc(10% - 2 * 5px);
+  }
+}
