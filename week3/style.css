@@ -111,7 +111,7 @@ img {
 .dropbtn {
   background-color: rgba(255, 255, 255, 0);
   border: rgba(255, 255, 255, 0);
-  padding: 15px 10px;
+  padding: 15px 0px;
   cursor: pointer;
   outline: none;
 }

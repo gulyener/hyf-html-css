@@ -1,4 +1,5 @@
-/* To make pictures slide. I got this code from Codepen and changed some parts*/
+/* To make pictures slide. I got this code from Codepen and changed some parts
+source: https://codepen.io/SitePoint/pen/WwqvqB */
 
 var controls = document.querySelectorAll(".controls");
 for (var i = 0; i < controls.length; i++) {
@@ -34,9 +35,11 @@ previous.onclick = function() {
   previousSlide();
 };
 
-/* To Make the Language Choices Clickable.
+/* To Make the Language Choices Clickable. I found this code online, but I was rushing and 
+   I cannot remember the resource
    It doesn't work properly, for instance it doesn't work when you click on 
-   some parts of the flag icon. I don't know why. */
+   some parts of the flag icon. I don't know why.
+   P.S Adding class names solved the bug */
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
