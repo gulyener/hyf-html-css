@@ -216,7 +216,7 @@ nav {
   position: absolute;
   font-size: 60px;
   top: 0px;
-  right: 260px;
+ /* right: 260px; */
   z-index: 50;
   color: rgb(44, 98, 46);
 }

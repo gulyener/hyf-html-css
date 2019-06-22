@@ -66,19 +66,21 @@ function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("navmain").style.marginRight = "190px";
   document.getElementById("navmain").style.marginLeft = "-190px";
-  document.getElementById("closingButton").style.display = "initial";
+  document.getElementById("closingButton").style.right = "250px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("navmain").style.marginRight = "0";
   document.getElementById("navmain").style.marginLeft = "0";
-  document.getElementById("closingButton").style.display = "none";
+  document.getElementById("closingButton").style.right = "-50px";
 }
+
+// This code is totally unnecessary
 
 /* I had to add this code to make the closing button disappear 
 when the page loads, otherwise it stays on the screen the whole time*/
-
+/*
 function hideButton() {
   document.getElementById("closingButton").style.display = "none";
-}
+}*/
