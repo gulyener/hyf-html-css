@@ -76,7 +76,8 @@ function closeNav() {
   document.getElementById("closingButton").style.right = "-50px";
 }
 
-// This code is totally unnecessary
+// This code is totally unnecessary but I'll keep it as a memory 
+// A memory of how bad I was as a coder once:)
 
 /* I had to add this code to make the closing button disappear 
 when the page loads, otherwise it stays on the screen the whole time*/
